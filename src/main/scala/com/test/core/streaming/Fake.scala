@@ -12,7 +12,7 @@ object Fake {
   def main(args: Array[String]) {
     if (args.length < 3) {
       System.err.println(
-        "Usage: test message" " +
+        "Usage: test message " +
           "path/to/spam path/to/ham")
       System.exit(1)
     }
