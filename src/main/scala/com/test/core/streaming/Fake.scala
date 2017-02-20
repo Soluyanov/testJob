@@ -12,13 +12,13 @@ object Fake {
   def main(args: Array[String]) {
     if (args.length < 3) {
       System.err.println(
-        "Usage: KafkaWordCountProducer <metadataBrokerList> <topic> " +
-          "<messagesPerSec> <wordsPerMessage>")
+        "Usage: test message" " +
+          "path/to/spam path/to/ham")
       System.exit(1)
     }
 
     val Array(testMessage, pathToSpamSet, pathToHamSet) = args
-    val sparkConf = new SparkConf().setMaster("local[2]").setAppName("Fake")
+    val sparkConf = new SparkConf().setMaster("local[*]").setAppName("Fake")
     val sc = new SparkContext(sparkConf)
 
     /** Преобразуем подготовленные наборы сообщений в RDD */
